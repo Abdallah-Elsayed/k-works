@@ -1,0 +1,98 @@
+/* =========================================================
+   MILL-WOOD THEME (mockup version)
+   Shared colors, fonts, spacing for the whole site.
+   Edit values here to restyle every page at once.
+   ========================================================= */
+
+:root {
+    /* Page background: soft cream from the mockups */
+    --color-bg: #f6efe4;
+    --color-panel: #fbf7f0;
+
+    /* Header + footer: deep chocolate brown */
+    --color-brown: #4a2b1c;
+    --color-brown-deep: #3a2015;
+
+    /* Gold used for primary buttons and the Gallery block */
+    --color-gold: #c8892a;
+    --color-gold-hover: #b4761f;
+    --color-gold-soft: #e2b45a;
+
+    /* Text */
+    --color-text: #2f1d14;
+    --color-text-muted: #6e5648;
+    --color-text-on-dark: #f8f0e6;
+
+    /* Lines and shadows */
+    --color-line: #e6d8c4;
+    --shadow-soft: 0 8px 20px rgba(58, 32, 21, 0.08);
+
+    /* Fonts (system fonts; easy, no install) */
+    --font-main: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+
+    /* Type sizes */
+    --text-xs: 0.8rem;
+    --text-sm: 0.95rem;
+    --text-md: 1.05rem;
+    --text-lg: 1.5rem;
+    --text-xl: 2.25rem;
+
+    /* Spacing */
+    --space-xs: 0.35rem;
+    --space-sm: 0.75rem;
+    --space-md: 1.25rem;
+    --space-lg: 2rem;
+    --space-xl: 3.5rem;
+
+    /* Shapes: pills + rounded photo cards */
+    --radius-pill: 999px;
+    --radius-card: 18px;
+    --radius-image: 14px;
+
+    /* Content width */
+    --layout-max: 1100px;
+
+    --gradient-page: linear-gradient(180deg,
+                #f7e7c4 0%,
+                #f0d7a4 45%,
+                #e8c888 100%
+    );
+}
+
+/* Shared buttons: use class="btn btn-gold" or class="btn btn-dark" */
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: var(--radius-pill);
+    font-family: var(--font-main);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-1px);
+}
+
+.btn-gold {
+    background: var(--color-gold);
+    color: var(--color-text-on-dark);
+}
+
+.btn-gold:hover {
+    background: var(--color-gold-hover);
+}
+
+.btn-dark {
+    background: var(--color-brown);
+    color: var(--color-text-on-dark);
+}
+
+.btn-dark:hover {
+    background: var(--color-brown-deep);
+}

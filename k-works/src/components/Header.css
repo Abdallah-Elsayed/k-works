@@ -1,0 +1,156 @@
+/* =========================================================
+   HEADER (hybrid + responsive hamburger)
+   Desktop: logo left, dark pill nav + gold button right
+   Mobile: logo left, ☰ button, menu opens as a panel
+   ========================================================= */
+
+.header {
+    background: transparent;
+    padding: var(--space-md) 0;
+}
+
+.header-inner {
+    width: min(100% - 2rem, var(--layout-max));
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md);
+    position: relative;
+}
+
+.header-brand {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    text-decoration: none;
+    color: var(--color-text);
+    z-index: 2;
+}
+
+.header-logo {
+    width: 48px;
+    height: 48px;
+}
+
+.header-name {
+    font-size: var(--text-lg);
+    font-weight: 800;
+    letter-spacing: -0.02em;
+    color: var(--color-brown-deep, #3a2015);
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.header-nav {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.2rem;
+    padding: 0.35rem 0.45rem;
+    background: var(--color-brown);
+    border-radius: var(--radius-pill);
+    box-shadow: var(--shadow-soft);
+}
+
+.header-nav a {
+    padding: 0.55rem 0.9rem;
+    border-radius: var(--radius-pill);
+    color: var(--color-text-on-dark);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.header-nav a:hover,
+.header-nav a.active {
+    background: linear-gradient(180deg,
+            var(--color-gold-soft, #e2b45a),
+            var(--color-gold));
+    color: var(--color-text-on-dark);
+}
+
+.header-cta {
+    flex-shrink: 0;
+}
+
+/* Hamburger button: hidden on desktop */
+.header-toggle {
+    display: none;
+    width: 44px;
+    height: 44px;
+    padding: 0;
+    border: none;
+    border-radius: 10px;
+    background: var(--color-brown);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 5px;
+    z-index: 2;
+}
+
+.header-toggle-bar {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: var(--color-text-on-dark);
+    border-radius: 2px;
+}
+
+/* ---------- Mobile / small screens ---------- */
+@media (max-width: 800px) {
+    .header-toggle {
+        display: inline-flex;
+    }
+
+    /* Hide the nav panel until the user opens it */
+    .header-right {
+        display: none;
+        position: absolute;
+        top: calc(100% + 0.5rem);
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--space-sm);
+        padding: var(--space-md);
+        background: var(--color-panel, #fbf7f0);
+        border-radius: var(--radius-card);
+        box-shadow: var(--shadow-soft);
+        z-index: 10;
+    }
+
+    /* Shown when React adds class "is-open" */
+    .header-right.is-open {
+        display: flex;
+    }
+
+    .header-nav {
+        width: 100%;
+        flex-direction: column;
+        border-radius: var(--radius-card);
+        padding: 0.4rem;
+    }
+
+    .header-nav a {
+        width: 100%;
+        text-align: center;
+    }
+
+    .header-cta {
+        width: 100%;
+    }
+
+    .header-name {
+        font-size: 1.2rem;
+    }
+}
