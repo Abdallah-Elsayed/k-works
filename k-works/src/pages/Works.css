@@ -1,0 +1,100 @@
+/* =========================================================
+   WORKS PAGE — portfolio grid + expand-in-place details
+   ========================================================= */
+
+.works {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+}
+
+.works-header h1 {
+    margin-bottom: var(--space-xs);
+}
+
+.works-header p {
+    margin: 0;
+    color: var(--color-text-muted);
+}
+
+/* Responsive grid: 1 / 2 / 4 columns */
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-md);
+    align-items: start;
+    /* each card keeps its own height */
+}
+
+.works-card {
+    background: var(--color-panel, #fbf7f0);
+    border-radius: var(--radius-card);
+    box-shadow: var(--shadow-soft);
+    overflow: hidden;
+}
+
+/* Clickable top of the card */
+.works-card-trigger {
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: none;
+    background: transparent;
+    text-align: left;
+    cursor: pointer;
+    color: inherit;
+    font: inherit;
+}
+
+.works-card-trigger img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+}
+
+.works-card-title {
+    display: block;
+    padding: var(--space-sm) var(--space-md) 0;
+    font-size: var(--text-md);
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.works-card-hint {
+    display: block;
+    padding: var(--space-xs) var(--space-md) var(--space-md);
+    font-size: var(--text-xs);
+    color: var(--color-gold);
+    font-weight: 600;
+}
+
+/* Expanded details under the photo/title */
+.works-card-details {
+    padding: 0 var(--space-md) var(--space-md);
+    border-top: 1px solid var(--color-line, #e6d8c4);
+    color: var(--color-text-muted);
+}
+
+.works-card-summary {
+    margin-top: var(--space-sm);
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+.works-card.is-open {
+    box-shadow: 0 12px 28px rgba(58, 32, 21, 0.14);
+}
+
+/* Tablet and up: more columns */
+@media (min-width: 801px) {
+    .works-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+/* Phone: one column */
+@media (max-width: 520px) {
+    .works-grid {
+        grid-template-columns: 1fr;
+    }
+}
