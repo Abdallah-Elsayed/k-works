@@ -21,10 +21,10 @@ function Header() {
         <Link to="/" className="header-brand" onClick={closeMenu}>
           <img
             className="header-logo"
-            src="/vite.svg"
-            alt="Mill-Wood logo"
+            src="/kworks-logo.svg"
+            alt="K-Works logo"
           />
-          <span className="header-name">Mill - Wood</span>
+          <span className="header-name">K-Works</span>
         </Link>
 
         {/* Hamburger button: only used on small screens (CSS hides it on desktop) */}
