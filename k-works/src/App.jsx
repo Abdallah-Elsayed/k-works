@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import Works from './pages/Works'
 import Studio from './pages/Studio'
 import Contact from './pages/Contact'
+import Login from './pages/Login'
 import './App.css'
 
 function App() {
@@ -17,6 +18,8 @@ function App() {
           <Route path="/works" element={<Works />} />
           <Route path="/studio" element={<Studio />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path='/Login' element={<Login />} />
+
         </Routes>
       </main>
       <Footer />
