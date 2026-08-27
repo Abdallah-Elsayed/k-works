@@ -57,3 +57,27 @@
     cursor: pointer;
     font: inherit;
 }
+.login-result {
+    margin: var(--space-sm) 0 var(--space-md);
+    padding: 0.85rem 1rem;
+    border-radius: 10px;
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.login-result-success {
+    background: #e8f5e9;
+    color: #1b5e20;
+}
+
+.login-result-error {
+    background: #fdecea;
+    color: #8a1f11;
+}
+
+.login-actions {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+    align-items: flex-start;
+}
