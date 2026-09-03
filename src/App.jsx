@@ -14,11 +14,10 @@ function App() {
       <Header />
       <main className="app-content">
         <Routes>
-          <Route path="/" element={<Home />} />
           <Route path="/k-works" element={<Home />} />
-          <Route path="/works" element={<Works />} />
-          <Route path="/studio" element={<Studio />} />
-          <Route path="/contact" element={<Contact />} />
+          <Route path="/k-works/works" element={<Works />} />
+          <Route path="/k-works/studio" element={<Studio />} />
+          <Route path="/k-works/contact" element={<Contact />} />
          
 
         </Routes>
