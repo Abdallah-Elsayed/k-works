@@ -16,7 +16,7 @@ function Home() {
 
         <figure className="home-founder">
           <img
-            src={process.env.PUBLIC_URL + "/images/founder.jpg"}
+            src={`${import.meta.env.BASE_URL}${"/images/founder.jpg".replace(/^\//, '')}`}
             alt="Portrait of the founder"
           />
           <figcaption>The founder in the studio</figcaption>
@@ -29,14 +29,14 @@ function Home() {
         <div className="home-places-grid">
           <figure>
             <img
-              src={process.env.PUBLIC_URL +"/images/workshop.jpg"}
+              src={`${import.meta.env.BASE_URL}${"/images/workshop.jpg".replace(/^\//, '')}`}
               alt="The Workshop"
             />
             <figcaption>The Workshop</figcaption>
           </figure>
           <figure>
             <img
-              src={process.env.PUBLIC_URL +"/images/work-carve.jpg"}
+              src={`${import.meta.env.BASE_URL}${"/images/work-carve.jpg".replace(/^\//, '')}`}
               alt="The workshop"
             />
             <figcaption>The works</figcaption>
