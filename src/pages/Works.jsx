@@ -37,7 +37,7 @@ export default function Works() {
               >
                 <div className="work-image-wrap">
                   <img
-                    src= {process.env.PUBLIC_URL + work.image}
+                    src={`${import.meta.env.BASE_URL}${work.image}`}
                     alt={work.title}
                     loading="lazy"
                   />
@@ -56,7 +56,7 @@ export default function Works() {
                   {work.image && (
                     <img
                       className="work-expand-image"
-                      src={process.env.PUBLIC_URL + work.image}
+                      src={`${import.meta.env.BASE_URL}${work.image}`}
                       alt=""
                     />
                   )}
