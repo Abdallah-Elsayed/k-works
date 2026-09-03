@@ -1,99 +1,113 @@
-/* =========================================================
-   WORKS PAGE — portfolio grid + expand-in-place details
-   ========================================================= */
-
-.works {
-    display: flex;
-    flex-direction: column;
-    gap: var(--space-lg);
+.works-page {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+    padding: 32px 0 72px;
 }
 
-.works-header h1 {
-    margin-bottom: var(--space-xs);
+.works-intro {
+    margin-bottom: 28px;
 }
 
-.works-header p {
+.works-kicker {
+    margin: 0 0 6px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    font-size: 0.72rem;
+    color: #8a6a43;
+}
+
+.works-intro h1 {
+    margin: 0 0 8px;
+    font-size: clamp(2rem, 5vw, 3.2rem);
+    color: #2c1a0c;
+}
+
+.works-lead {
     margin: 0;
-    color: var(--color-text-muted);
+    max-width: 36rem;
+    color: #5c4330;
 }
 
-/* Responsive grid: 1 / 2 / 4 columns */
 .works-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-md);
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    gap: 18px;
     align-items: start;
-    /* each card keeps its own height */
 }
 
-.works-card {
-    background: var(--color-panel, #fbf7f0);
-    border-radius: var(--radius-card);
-    box-shadow: var(--shadow-soft);
+.work-card {
+    background: #fff8ee;
+    border: 1px solid rgba(90, 58, 32, 0.12);
+    border-radius: 18px;
     overflow: hidden;
+    box-shadow: 0 10px 24px rgba(70, 40, 16, 0.06);
 }
 
-/* Clickable top of the card */
-.works-card-trigger {
+.work-card-hit {
     display: block;
     width: 100%;
     padding: 0;
-    border: none;
+    border: 0;
     background: transparent;
     text-align: left;
     cursor: pointer;
     color: inherit;
-    font: inherit;
 }
 
-.works-card-trigger img {
+.work-image-wrap {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+    background: #e8d7c0;
+}
+
+.work-image-wrap img,
+.work-expand-image {
+    display: block;
     width: 100%;
-    aspect-ratio: 4 / 3;
+    height: 100%;
     object-fit: cover;
 }
 
-.works-card-title {
-    display: block;
-    padding: var(--space-sm) var(--space-md) 0;
-    font-size: var(--text-md);
-    font-weight: 700;
-    color: var(--color-text);
+.work-card-body {
+    padding: 14px 14px 16px;
 }
 
-.works-card-hint {
-    display: block;
-    padding: var(--space-xs) var(--space-md) var(--space-md);
-    font-size: var(--text-xs);
-    color: var(--color-gold);
-    font-weight: 600;
+.work-card-body h2 {
+    margin: 0 0 4px;
+    font-size: 1.05rem;
+    color: #2c1a0c;
 }
 
-/* Expanded details under the photo/title */
-.works-card-details {
-    padding: 0 var(--space-md) var(--space-md);
-    border-top: 1px solid var(--color-line, #e6d8c4);
-    color: var(--color-text-muted);
+.work-meta,
+.work-size {
+    margin: 0 0 8px;
+    font-size: 0.8rem;
+    color: #8a6a43;
 }
 
-.works-card-summary {
-    margin-top: var(--space-sm);
-    font-weight: 600;
-    color: var(--color-text);
+.work-summary,
+.work-description {
+    margin: 0;
+    color: #5c4330;
+    line-height: 1.45;
 }
 
-.works-card.is-open {
-    box-shadow: 0 12px 28px rgba(58, 32, 21, 0.14);
+.work-expand {
+    padding: 0 14px 16px;
+    border-top: 1px solid rgba(90, 58, 32, 0.1);
 }
 
-/* Tablet and up: more columns */
-@media (min-width: 801px) {
-    .works-grid {
-        grid-template-columns: repeat(4, 1fr);
-    }
+.work-expand-image {
+    margin: 12px 0;
+    max-height: 320px;
+    border-radius: 12px;
 }
 
-/* Phone: one column */
-@media (max-width: 520px) {
+.work-card.is-open {
+    grid-row: span 1;
+}
+
+@media (max-width: 640px) {
     .works-grid {
         grid-template-columns: 1fr;
     }

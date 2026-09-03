@@ -1,0 +1,56 @@
+[
+  {
+    "id": "Laser on Wood",
+    "title": "Oak side table",
+    "image": "/images/IMG-20251030-WA0029.jpg",
+    "thumb": "/images/IMG-20251030-WA0029.jpg",
+    "material": "European oak",
+    "year": 2024,
+    "size": "45 × 45 × 55 cm",
+    "summary": "Logo on Wood.",
+    "description": "Built as a small living-room piece. The frame is solid oak; the top is a paler board so the silhouette stays light. Edges are eased by hand so it feels finished from every angle."
+  },
+    {
+    "id": "Product-1",
+    "title": "Oak side table",
+    "image": "/images/IMG-20251030-WA0028.jpg",
+    "thumb": "/images/IMG-20251030-WA0028.jpg",
+    "year": 2024,
+    "size": "45 × 45 × 55 cm",
+    "summary": "Logo on Wood.",
+    "description": "Built as a small living-room piece. The frame is solid oak; the top is a paler board so the silhouette stays light. Edges are eased by hand so it feels finished from every angle."
+  },
+
+    {
+    "id": "Product-2",
+    "title": "Two",
+    "image": "/images/IMG-20251030-WA0027.jpg",
+    "thumb": "/images/IMG-20251030-WA0027.jpg",
+    "year": 2024,
+    "size": "45 × 45 × 55 cm",
+    "summary": "Logo on Wood.",
+    "description": "Built as a small living-room piece."
+  },
+
+    {
+    "id": "Product-3",
+    "title": "three",
+    "image": "/images/IMG-20251030-WA0025.jpg",
+    "thumb": "/images/IMG-20251030-WA0025.jpg",
+    "year": 2024,
+    "size": "45 × 45 × 55 cm",
+    "summary": "Product -3",
+    "description": "Built as a small living-room piece 3."
+  },
+    {
+    "id": "Product-4",
+    "title": "Four",
+    "image": "/images/IMG-20251030-WA0024.jpg",
+    "thumb": "/images/IMG-20251030-WA0024.jpg",
+    "year": 2024,
+    "size": "45 × 45 × 55 cm",
+    "summary": "Product-4",
+    "description": "Built as a small living-room piece 4."
+  }
+
+]
