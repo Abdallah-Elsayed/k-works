@@ -21,7 +21,7 @@ function Header() {
         <Link to="/" className="header-brand" onClick={closeMenu}>
           <img
             className="header-logo"
-            src="/kworks-logo.svg"
+            src= {process.env.PUBLIC_URL +"/kworks-logo.svg"}
             alt="K-Works logo"
           />
           <span className="header-name">K-Works</span>

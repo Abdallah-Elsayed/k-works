@@ -16,7 +16,7 @@ function Home() {
 
         <figure className="home-founder">
           <img
-            src="/images/founder.jpg"
+            src={process.env.PUBLIC_URL + "/images/founder.jpg"}
             alt="Portrait of the founder"
           />
           <figcaption>The founder in the studio</figcaption>
@@ -29,14 +29,14 @@ function Home() {
         <div className="home-places-grid">
           <figure>
             <img
-              src="/images/workshop.jpg"
+              src={process.env.PUBLIC_URL +"/images/workshop.jpg"}
               alt="The Workshop"
             />
             <figcaption>The Workshop</figcaption>
           </figure>
           <figure>
             <img
-              src="/images/work-carve.jpg"
+              src={process.env.PUBLIC_URL +"/images/work-carve.jpg"}
               alt="The workshop"
             />
             <figcaption>The works</figcaption>
