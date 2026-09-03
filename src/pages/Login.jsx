@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
-import { supabase } from '../superbaseClient'
+//import { supabase } from '../superbaseClient'
 import './Login.css'
 
 function Login() {
@@ -14,70 +14,10 @@ function Login() {
   const [userEmail, setUserEmail] = useState('')
 
   // If already logged in, show that instead of the form
-  useEffect(() => {
-    async function checkSession() {
-      const { data } = await supabase.auth.getSession()
-      const user = data.session?.user
+  
 
-      if (user) {
-        setUserEmail(user.email ?? '')
-        setStatus('success')
-        setMessage('You are logged in.')
-      }
-    }
 
-    checkSession()
-  }, [])
 
-  async function handleSubmit(event) {
-    event.preventDefault()
-    setStatus('loading')
-    setMessage('')
-
-    if (mode === 'signup') {
-      const { data, error } = await supabase.auth.signUp({
-        email,
-        password,
-      })
-
-      if (error) {
-        setStatus('error')
-        setMessage(error.message)
-        return
-      }
-
-      // Some projects require email confirmation
-      if (data.user && !data.session) {
-        setStatus('success')
-        setMessage(
-          'Account created. Check your email to confirm, then log in.'
-        )
-        setUserEmail(email)
-        return
-      }
-
-      setStatus('success')
-      setMessage('Account created. You are logged in.')
-      setUserEmail(data.user?.email ?? email)
-      return
-    }
-
-    // Login mode
-    const { data, error } = await supabase.auth.signInWithPassword({
-      email,
-      password,
-    })
-
-    if (error) {
-      setStatus('error')
-      setMessage(error.message || 'Login failed. Please try again.')
-      return
-    }
-
-    setStatus('success')
-    setMessage('Login successful.')
-    setUserEmail(data.user?.email ?? email)
-  }
 
   function handleTryAgain() {
     setStatus('form')
@@ -86,12 +26,7 @@ function Login() {
   }
 
   async function handleLogout() {
-    await supabase.auth.signOut()
-    setUserEmail('')
-    setStatus('form')
-    setMessage('')
-    setEmail('')
-    setPassword('')
+
   }
 
   // ---- Success screen ----
