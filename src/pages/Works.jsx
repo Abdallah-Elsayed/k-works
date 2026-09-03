@@ -56,7 +56,7 @@ export default function Works() {
                   {work.image && (
                     <img
                       className="work-expand-image"
-                      src={`${import.meta.env.BASE_URL}${work.image}`}
+                      src={`${import.meta.env.BASE_URL}${work.image.replace(/^\//, '')}`}
                       alt=""
                     />
                   )}
