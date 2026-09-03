@@ -5,7 +5,7 @@ function Footer() {
     <footer className="footer">
       <div className="footer-inner">
         <div className="footer-col">
-          <h3>Mill-Wood</h3>
+          <h3>K-Works</h3>
           <p>
             All content on this website is provided for general information.
             All rights reserved.
@@ -24,8 +24,8 @@ function Footer() {
 
         <div className="footer-col">
           <h3>Contact</h3>
-          <p>© {new Date().getFullYear()} Mill-Wood</p>
-          <p>Everything on this site belongs to Mill-Wood unless noted.</p>
+          <p>© {new Date().getFullYear()} K-Works</p>
+          <p>Everything on this site belongs to K-Works unless noted.</p>
           {/* Simple text stand-ins for social icons; replace later */}
           <div className="footer-social" aria-label="Social links">
             <span>FB</span>
